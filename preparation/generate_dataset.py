@@ -1,14 +1,14 @@
 '''
-this script parses human-readable raw data and generates corresponding BGP dataset.
+this script parses human-readable raw data (e.g., raw data in year 1999 from rrc00) and generates corresponding BGP dataset.
 @author: yingjun
 '''
 
 import os
 
-outfile=file("raw_path.txt", 'w')
-def extract_raw_path(dirname, filename):
-	infile=file(dirname+'/'+filename)
-	for i in range(5):
+outfiles={}
+def extract_raw_path(filename, outfile):
+	infile=file(filename)
+	for i in range(6):
 		infile.readline()
 	while 1:
 		line=infile.readline()
@@ -19,9 +19,15 @@ def extract_raw_path(dirname, filename):
 
 def traverse_directory(directory, function):
 	for root, dirs, files in os.walk(directory):
-		for file in files:
-			function(directory, file)
+		for dirname in dirs:
+			outfiles[dirname]=file('result/'+dirname, 'a')
+		for filename in files:
+			fullname=os.path.join(root, filename)
+			outfile=outfiles[fullname.split('/')[-2]]
+			if 'bview' not in fullname:
+				print filename
+				function(fullname, outfile)
 
 if __name__=='__main__':
-	traverse_directory('sampledata', extract_raw_path)
+	traverse_directory('data.ris.ripe.net/rrc00', extract_raw_path)
 
