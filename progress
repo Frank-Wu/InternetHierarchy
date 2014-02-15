@@ -1,14 +1,7 @@
 *******************************
-rrc00
+rrc00 compg22
 ===============================
 1999 collected and generated, stored in compg24.
-2000 collected.
-
-data of year 1999: compg24.
-data of year 2000: compg23.
-data of year 2001: compg22.
-data of year 2002: compg20.
-#data of year 2003: compg19.
 
 1990.09: view*. human-readable.
 1990.10: view*. human-readable.
@@ -22,8 +15,6 @@ data of year 2002: compg20.
 2001.01: bgpdump.
 ===============================
 *******************************
-rrc01
-===============================
-2000 collected.
+rrc01    compg23
 ===============================
 
