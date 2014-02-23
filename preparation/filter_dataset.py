@@ -7,6 +7,7 @@ this script executes several commands sequentially.
 '''
 
 import os
+import re
 import pybloomfilter
 
 #remove prefix
@@ -20,11 +21,11 @@ def remove_prefix(infilename, outfilename):
 		line=line.lstrip('ASPATH: ').strip().split()
 		outfile.write(' '.join(line)+'\n')
 		
-#remove  duplicated paths
+#remove duplicated paths
 def filter_path(infilename, outfilename):
 	infile=file(infilename, 'r')
 	outfile=file(outfilename, 'w')
-	bf=pybloomfilter.BloomFilter(1000000, 0.000001, 'bloom')
+	bf=pybloomfilter.BloomFilter(10000000, 0.000001, outfilename+'bloom')
 	while 1:
 		line=infile.readline()
 		if line=='':
@@ -37,35 +38,38 @@ def remove_path(infilename, outfilename):
 	infile=file(infilename, 'r')
 	outfile=file(outfilename, 'w')
 	while 1:
-		line=infile.readline()
-		if line=='':
-			break
-		if '[' in line or ']' in line or '{' in line or '}' in line:
+		try:
+			line=infile.readline()
+			if line=='':
+				break
+			if '[' in line or ']' in line or '{' in line or '}' in line:
+				continue
+			re.sub("[^0-9]", "", line)
+			line=line.split()
+			if len(line)<=1:
+				continue
+			newline=[line[0]]
+			for i in range(1, len(line)):
+				if int(line[i])!=int(line[i-1]):
+					newline.append(line[i])
+			outfile.write(' '.join(newline)+'\n')
+		except:
 			continue
-		line=line.split()
-		if len(line)==1:
-			continue
-		newline=[line[0]]
-		for i in range(1, len(line)):
-			if line[i]!=line[i-1]:
-				newline.append(line[i])
-		outfile.write(' '.join(line)+'\n')
-			
 
 
 def preprocess_path(infilename, outfilename):
-	remove_prefix(infilename, 'tmp1')
-	filter_path('tmp1', 'tmp2')
-	remove_path('tmp2', 'tmp3')
-	filter_path('tmp3', outfilename)
+	remove_prefix(infilename, outfilename+'tmp1')
+	filter_path(outfilename+'tmp1', outfilename+'tmp2')
+	remove_path(outfilename+'tmp2', outfilename+'tmp3')
+	filter_path(outfilename+'tmp3', outfilename)
 
 def traverse_directory(directory, function):
 	for root, dirs, files in os.walk(directory):
 		for filename in files:
 			infilename=os.path.join(root, filename)
-			outfilename='processed/'+infilename
+			outfilename='processed1/'+filename
 			function(infilename, outfilename)
 
 
 if __name__=='__main__':
-	traverse_directory('dataset_rrc00_1999', preprocess_path)
+	traverse_directory('result1', preprocess_path)
