@@ -92,4 +92,4 @@ def traverse_directory(directory, function):
 			function(infilename, outfileprefix)
 
 if __name__=="__main__":
-	traverse_directory('processed', preprocess_dataset)
+	traverse_directory('processed1', preprocess_dataset)
