@@ -6,7 +6,6 @@ import pickle
 dictionary=[]
 
 def convert_dataset(infile, outfile):
-	dictionary.append(0)
 	f=file(infile, "r")
 	while 1:
 		line=f.readline()
@@ -24,14 +23,15 @@ def convert_dataset(infile, outfile):
 			break
 		words=line.strip().split(" ")
 		for i in words:
-			g.write(str(dictionary.index(i))+";")
+			g.write(str(dictionary.index(i)+1)+";")
 		g.write("0;\n")
+	f.close()
 	g.close()
 	info=file(outfile+".size", "w")
-	info.write(str(len(dictionary))+'\n')
+	info.write(str(len(dictionary)+1)+'\n')
 	info.close()
 	pickle.dump(dictionary, open(outfile+".dic", "wb"), 1)
-	return len(dictionary)
+	return len(dictionary)+1
 
 def generate_states(obs_num, state_num, outfilename):
 	f=file(outfilename, "w")
@@ -92,4 +92,7 @@ def traverse_directory(directory, function):
 			function(infilename, outfileprefix)
 
 if __name__=="__main__":
-	traverse_directory('processed1', preprocess_dataset)
+	year=sys.argv[1]
+	filename=year+'.01'
+	preprocess_dataset('processed/'+filename, 'hmmdataset/'+filename)
+#	traverse_directory('processed', preprocess_dataset)
