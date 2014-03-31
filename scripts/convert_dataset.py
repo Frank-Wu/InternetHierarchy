@@ -12,7 +12,10 @@ def convert_dataset(infile, outfile):
 		if line=="":
 			break
 		words=line.strip().split(" ")
-		for i in words:
+		#since we need to remove initial AS, i.e., vantage point AS, we need to guarantee that number of ASes in a single path should be larger than 2.
+		if len(words)<=2:
+			continue
+		for i in words[1:]:
 			if i not in dictionary:
 				dictionary.append(i)
 	f.seek(0)
@@ -22,7 +25,9 @@ def convert_dataset(infile, outfile):
 		if line=="":
 			break
 		words=line.strip().split(" ")
-		for i in words:
+		if len(words)<=2:
+			continue
+		for i in words[1:]:
 			g.write(str(dictionary.index(i)+1)+";")
 		g.write("0;\n")
 	f.close()
@@ -94,5 +99,5 @@ def traverse_directory(directory, function):
 if __name__=="__main__":
 	year=sys.argv[1]
 	filename=year+'.01'
-	preprocess_dataset('processed/'+filename, 'hmmdataset/'+filename)
-#	traverse_directory('processed', preprocess_dataset)
+	preprocess_dataset('dataset/'+filename, 'hmmdataset/'+filename)
+#	traverse_directory('dataset', preprocess_dataset)

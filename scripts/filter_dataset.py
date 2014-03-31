@@ -7,6 +7,7 @@ this script executes several commands sequentially.
 '''
 
 import os
+import sys
 import re
 import pybloomfilter
 
@@ -67,9 +68,13 @@ def traverse_directory(directory, function):
 	for root, dirs, files in os.walk(directory):
 		for filename in files:
 			infilename=os.path.join(root, filename)
-			outfilename='processed1/'+filename
+			outfilename='dataset/'+filename
 			function(infilename, outfilename)
 
 
 if __name__=='__main__':
-	traverse_directory('result1', preprocess_path)
+	year=sys.argv[1]
+	filename=year+'.01'
+	preprocess_path('rawdataset/'+filename, 'dataset/'+filename)
+	#traverse_directory('rawdataset', preprocess_path)
+	
