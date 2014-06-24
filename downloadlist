@@ -1,0 +1,7 @@
+compg12: 00, [03,no content], [05,no content], 07
+compg11: [10,not complete], 11
+compg10: 12, 13
+compg9: 14, 16
+compg8: 15, [09,deleted]
+compg7: [08,deleted] 06
+compg6: 04 [02,deleted] 01
