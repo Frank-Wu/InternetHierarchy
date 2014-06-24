@@ -73,8 +73,10 @@ def traverse_directory(directory, function):
 
 
 if __name__=='__main__':
-	year=sys.argv[1]
-	filename=year+'.01'
+	repo=sys.argv[1]
+	year=sys.argv[2]
+	month=sys.argv[3]
+	filename='rrc'+repo+'.'+year+'.'+month
 	preprocess_path('rawdataset/'+filename, 'dataset/'+filename)
 	#traverse_directory('rawdataset', preprocess_path)
 	
