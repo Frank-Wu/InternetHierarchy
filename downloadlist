@@ -1,7 +1,7 @@
-compg12: 00, [03,no content], [05,no content], 07
-compg11: [10,not complete], 11
-compg10: 12, 13
-compg9: 14, 16
-compg8: 15, [09,deleted]
-compg7: [08,deleted] 06
-compg6: 04 [02,deleted] 01
+compg12: 00 (processed), 07 (processed), [03,no content], [05,no content]
+compg11: 11 (processed), 10 (processed, incomplete)
+compg10: 12 (processed), 13 (processed)
+compg9: 14 (processed), 16 (processed)
+compg8: 15 (processed), [09,deleted]
+compg7: 06 (processed), [08,deleted]
+compg6: 04 (processed), 01 (processed), [02,deleted]
