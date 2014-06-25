@@ -1,3 +1,4 @@
+year 2011
 compg12: 00 (processed), 07 (processed), [03,no content], [05,no content]
 compg11: 11 (processed), 10 (processed, incomplete)
 compg10: 12 (processed), 13 (processed)
@@ -5,3 +6,12 @@ compg9: 14 (processed), 16 (processed)
 compg8: 15 (processed), [09,deleted]
 compg7: 06 (processed), [08,deleted]
 compg6: 04 (processed), 01 (processed), [02,deleted]
+
+year 2010
+compg12: 00 (not processed), 07 (not processed), [03,no content], [05,no content]
+compg11: 11 (not processed), 10 (not processed, incomplete)
+compg10: 12 (not processed), 13 (not processed)
+compg9: 14 (not processed), 16 (not processed)
+compg8: 15 (processed-filtered), [09,deleted]
+compg7: 06 (processed-filtered), [08,deleted]
+compg6: 04 (processed-filtered), 01 (processed-filtered), [02,deleted]
