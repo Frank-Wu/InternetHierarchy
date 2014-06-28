@@ -19,12 +19,12 @@ compg39: 03
 compg38: 05
 
 all years:
-compg12: 00 (raw processing), 07 (not processed)
-compg11: 11 (raw processing), 10 (not processed)
-compg44: 12 (not processed), 13 (not processed)
+compg12: 00 (raw processing), 07 (raw processing)
+compg11: 11 (raw processing), 10 (raw processing)
+compg44: 12 (raw processing), 13 (not processed)
 compg43: 01 (raw processing), 04 (not processed)
-compg42: 06 
-compg41: 15
-compg40: 14
-compg39: 03
-compg38: 05
+compg42: 06 (raw processing)
+compg41: 15 (raw processing)
+compg40: 14 (raw processing), 16 (not processed)
+compg39: 03 (not fully download)
+compg38: 05 (raw processing)
