@@ -19,12 +19,13 @@ compg39: 03
 compg38: 05
 
 all years:
-compg12: 00 (raw processing), 07 (raw processing)
-compg11: 11 (raw processing), 10 (raw processing)
-compg44: 12 (raw processing), 13 (not processed)
-compg43: 01 (raw processing), 04 (not processed)
-compg42: 06 (raw processing)
-compg41: 15 (raw processing)
-compg40: 14 (raw processing), 16 (not processed)
+compg12: 00 (2004.01-2012.01) (filter processing), 07 (2004.01-2013.12) (raw processing)
+compg11: 11 (not processed), 10 (raw processing)
+compg44: 12 (2004.08-2013.12) (filter processing), 13 (2005.07-2013.12) (raw processing)
+compg42: 06 (2004.01-2013.12) (filter processing)
+compg40: 14 (2005.01-2013.12) (filter processing)
 compg39: 03 (not fully download)
-compg38: 05 (raw processing)
+compg38: 05 (2004.01-2013.12) (filter processing)
+compg37: 15 (2006.01-2013.12) (filter processing)
+compg36: 01 (2004.01-2013.12) (raw processing)
+compg35: 04 (2004.01-2013.12) (raw processing)
