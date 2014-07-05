@@ -98,6 +98,7 @@ def traverse_directory(directory, function):
 
 if __name__=="__main__":
 	year=sys.argv[1]
-	filename=year+'.01'
-	preprocess_dataset('dataset/'+filename, 'hmmdataset/'+filename)
-#	traverse_directory('dataset', preprocess_dataset)
+	month=sys.argv[2]
+	filename=year+'.'+month
+	preprocess_dataset('mergedataset/'+filename, 'hmmdataset/'+filename)
+

@@ -1,11 +1,7 @@
-year=2011
-for month in {01..06};
+state_num=5
+for month in {1..4};
 do 
-	obs_num=`cat hmmdataset/${year}.${month}.seq.size`;
-	state_num=6
-#	sleep 20m
-	#for state_num in {4..7};
-#	do 
-		./jahmm.sh learn-bw -opdf integer -r $obs_num -is hmmdataset/${year}.${month}.seq -ni 1000 -i hmmdataset/${year}.${month}.${state_num}.hmm -o hmmresult/${year}.${month}.${state_num}.hmm &
-#	done;
+	ym=$1.`printf "%02d" ${month}`
+	obs_num=`cat hmmdataset/${ym}.seq.size`;
+	./jahmm.sh learn-bw -opdf integer -r $obs_num -is hmmdataset/${ym}.seq -ni 1000 -i hmmdataset/${ym}.${state_num}.hmm -o hmmresult/${ym}.${state_num}.hmm &
 done;

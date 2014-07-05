@@ -78,5 +78,10 @@ if __name__=='__main__':
 	month=sys.argv[3]
 	filename='rrc'+repo+'.'+year+'.'+month
 	preprocess_path('rawdataset/'+filename, 'dataset/'+filename)
-	#traverse_directory('rawdataset', preprocess_path)
-	
+	'''
+	year=sys.argv[1]
+	month=sys.argv[2]
+	filename=year+'.'+month
+	filter_path('mergerawdataset/'+filename, 'mergedataset/'+filename)
+	'''
+
