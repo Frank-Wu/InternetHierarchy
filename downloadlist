@@ -18,14 +18,29 @@ compg6  -> compg43: 04 (processed-filtered), 01 (processed-filtered), [02,delete
 compg39: 03
 compg38: 05
 
-all years:
-compg12: 00 (2004.01-2013.12) (filter processed), 07 (2004.01-2013.12) (filter processed)
-compg11: 11 (2004.01-2013.12) (filter processed), 10 (2004.01-2013.12) (filter processed)
-compg44: 12 (2004.08-2013.12) (filter processed), 13 (2005.07-2013.12) (filter processed)
-compg42: 06 (2004.01-2013.12) (filter processed)
-compg40: 14 (2005.01-2013.12) (filter processed)
-compg39: 03 (2004.01-2013.12) (filter processed)
-compg38: 05 (2004.01-2013.12) (filter processed)
-compg37: 15 (2006.01-2013.12) (filter processed)
-compg36: 01 (2004.01-2013.12) (filter processed)
-compg35: 04 (2004.01-2013.12) (filter processed)
+all years (filter processed):
+===========unused===============
+compg44: 12 (2004.08-2013.12), 13 (2005.07-2013.12)
+compg40: 14 (2005.01-2013.12)
+compg37: 15 (2006.01-2013.12)
+
+===========merged (2004.01-2013.12)==============
+compg12: 00, 07
+compg11(migrated): 11, 10
+compg42(migrated): 06
+compg39(migrated): 03
+compg38(migrated): 05
+compg36(migrated): 01
+compg35(migrated): 04
+
+===========distribute============
+compg11:
+compg12:
+compg35:
+compg36:
+compg37:
+compg38:
+compg39:
+compg40:
+compg42:
+compg44:
