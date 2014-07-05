@@ -34,13 +34,13 @@ compg36(migrated): 01
 compg35(migrated): 04
 
 ===========distribute============
-compg11: 2012 (converting)
-compg12: 2013 (converting)
-compg35: 2011 (converting)
-compg36: 2010 (converting)
-compg37: 2009 (converting)
-compg38: 2008 (converting)
-compg39: 2007 (converting)
-compg40: 2006 (converting)
-compg42: 2005 (converting)
-compg44: 2004 (converting)
+compg11: 2012 (converting) {statenum=5 month=1-4}
+compg12: 2013 (converting) {statenum=5 month=1-4}
+compg35: 2011 (converting) {statenum=5 month=1-6}
+compg36: 2010 (converting) {statenum=5 month=1-6}
+compg37: 2009 (converting) {statenum=5 month=1-6}
+compg38: 2008 (converting) {statenum=5 month=1-6}
+compg39: 2007 (converting) {statenum=5 month=1-6}
+compg40: 2006 (converting) {statenum=5 month=1-6}
+compg42: 2005 (converting) {statenum=5 month=1-6}
+compg44: 2004 (converting) {statenum=5 month=1-6}
