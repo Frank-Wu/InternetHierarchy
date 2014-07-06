@@ -40,7 +40,7 @@ compg35: 2011 (converting) {statenum=5 month=1-6}
 compg36: 2010 (converting) {statenum=5 month=1-6}
 compg37: 2009 (converting) {statenum=5 month=1-6}
 compg38: 2008 (converting) {statenum=5 month=1-6}
-compg39: 2007 (converting) {statenum=5 month=1-6}
-compg40: 2006 (converting) {statenum=5 month=1-6}
-compg42: 2005 (converting) {statenum=5 month=1-6}
-compg44: 2004 (converting) {statenum=5 month=1-6}
+compg39: 2007 (converting) finished: {statenum=5 month=1-6} processing: {statenum=5 month=7-12}
+compg40: 2006 (converting) finished: {statenum=5 month=1-6} processing: {statenum=5 month=7-12}
+compg42: 2005 (converting) finished: {statenum=5 month=1-6} processing: {statenum=5 month=7-12}
+compg44: 2004 (converting) finished: {statenum=5 month=1-6} processing: {statenum=5 month=7-12}
