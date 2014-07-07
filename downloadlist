@@ -43,4 +43,4 @@ compg38: 2008 (converting) processing: {statenum=5 month=1-12} {statenum=6 month
 compg39: 2007 (converting) finished: {statenum=5 month=1-12} processing: {statenum=6 month=1-6}
 compg40: 2006 (converting) finished: {statenum=5 month=1-12} processing: {statenum=6 month=1-6}
 compg42: 2005 (converting) finished: {statenum=5 month=1-12} processing: {statenum=5 month=1-6}
-compg44: 2004 (converting) finished: {statenum=5 month=1-12} processing: {statenum=6 month=1-6}
+compg44: 2004 (converting) finished: {statenum=5 month=1-12} processing: {statenum=6 month=1-12}
